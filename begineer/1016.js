@@ -1,4 +1,4 @@
 var input = require('fs').readFileSync('stdin', 'utf8');
-var lines = input.split('\n')
+var lines = input.split('\n');
 
-console.log(`${parseInt(lines) * 2} minutos`)
+console.log(`${parseInt(lines) * 2} minutos`);

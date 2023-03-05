@@ -1,12 +1,24 @@
 var input = require("fs").readFileSync("stdin", "utf8");
-var lines = input.trim().split("\n");
+var lines = input.trim().split(".");
 
-let valor = lines.map(num => parseFloat(num))
+const valor = lines.map(num => Number(num))
 
-const notas = [100, 50, 20, 10, 5, 2, 1, 0.5, 0.25, 0.1, 0.05, 0.01]
+console.log(valor)
 
-notas.forEach((a) => {
-    let qtde = Math.trunc(valor / a);
-    valor -= qtde * a 
-    console.log(`${qtde} ${valor > 1 ? dict = 'nota(s)' : 'moeda(s)'} de R$${a.toFixed(2)}`)
-});
+const notas = [100, 50, 20, 10, 5, 2, 1]
+const moedas = [50, 25, 10, 5, 1]
+
+function quantidade (array,valor) {
+    array.forEach((a, b, c) => {
+        let qtde = Math.floor(valor / a);
+        valor -= qtde * a;
+        console.log(`${qtde}`);
+    })
+};
+valor.forEach((a,b) => {
+    if(b == 0){
+        quantidade(notas, a);
+    } else {
+        quantidade(moedas, a);
+    }
+})
