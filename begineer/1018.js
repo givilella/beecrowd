@@ -2,10 +2,11 @@ var input = require("fs").readFileSync("stdin", "utf8");
 var lines = input.split("\n");
 
 const notas = [100, 50, 20, 10, 5, 2, 1];
+let valor = Number(lines);
+console.log(valor)
 
-console.log(Number(lines));
 notas.forEach(a => {
-    let qtde = Math.trunc(lines / a);
-    lines -= qtde * a;
-    console.log(`${qtde} nota(s) de R$${a.toFixed(2)}`);
+    const qtde = Math.trunc(valor / a);
+    valor -= qtde * a;
+    console.log(`${qtde} nota(s) de R$ ${a},00`);
 });

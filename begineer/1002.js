@@ -1,7 +1,7 @@
 var input = require('fs').readFileSync('stdin', 'utf8');
-var lines = input.split(' ');
+var lines = input.trim().split('\n');
 
-let raio = lines.map(num => parseFloat(num));
+let [a, b] = lines.map(num => parseFloat(num));
 
-const area = r => r**2 * 3.14159;
-console.log(`A=${area(raio).toFixed(4)}`);
+const soma = (a, b) => a + b;
+console.log(`x = ${soma(a, b)}`);
