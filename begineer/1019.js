@@ -1,4 +1,4 @@
-var input = require("fs").readFileSync("stdin", "utf8");
+var input = require("fs").readFileSync("/stdin", "utf8");
 var lines = input.trim().split("\n");
 
 let valor = lines.map(num => parseInt(num));

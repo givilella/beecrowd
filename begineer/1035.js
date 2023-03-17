@@ -1,13 +1,16 @@
 var input = require("fs").readFileSync("stdin", "utf8");
 var lines = input.trim().split(" ");
 
-[a, b, c, d] = lines.map(num => parseInt(num))
-console.log(`${a} ${b} ${c} ${d}`)
-if(b > c && d > a && c + d > a + b && c > 0 && d > 0 && a % 2 === 0){
-    console.log('Valores aceitos')
-}else{
-    console.log('Valores nao aceitos')
-}
+let [a, b, c, d] = lines.map(num => Number(num));
 
-refazer
+const condicoes = [b > c, d > a, (c + d) > (a + b), c > 0, d > 0, a % 2 === 0];
 
+let i = 0;
+while (i < condicoes.length) 
+    if (condicoes[i]){
+        i++;
+    } else {
+        break;
+    }
+
+(i == condicoes.length) ? console.log('Valores aceitos') : console.log('Valores nao aceitos')
