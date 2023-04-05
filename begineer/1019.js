@@ -4,7 +4,7 @@ var lines = input.trim().split("\n");
 let valor = lines.map(num => parseInt(num));
 
 const tempo = [3600, 60, 1];
-let result = [];
+let result;
 
 tempo.forEach(a => {
     let qtde = Math.trunc(valor / a);

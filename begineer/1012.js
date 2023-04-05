@@ -9,5 +9,8 @@ const trapezium = (a, b, h) => (a + b) * h / 2;
 const rectangle = (b, h) => b * h;
 const square = l => l ** 2;
 
-
-console.log(`TRIANGULO: ${triangle(a, c).toFixed(3)}\nCIRCULO: ${circle(c).toFixed(3)}\nTRAPEZIO: ${trapezium(a, b, c).toFixed(3)}\nQUADRADO: ${square(b).toFixed(3)}\nRETANGULO: ${rectangle(a, b).toFixed(3)}`);
+console.log(`TRIANGULO: ${triangle(a, c).toFixed(3)}\n
+            CIRCULO: ${circle(c).toFixed(3)}\n
+            TRAPEZIO: ${trapezium(a, b, c).toFixed(3)}\n
+            QUADRADO: ${square(b).toFixed(3)}\n
+            RETANGULO: ${rectangle(a, b).toFixed(3)}`);
